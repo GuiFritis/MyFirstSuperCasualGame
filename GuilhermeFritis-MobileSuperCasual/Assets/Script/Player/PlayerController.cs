@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     public string enemyTag = "Enemy";
 
-    private bool _canRun = true;
+    private bool _canRun = false;
     private Vector3 _pos;
 
     void Start()
