@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f76787c2fc8875c47bc5285ec083c64b, type: 3}
   m_Name: CoinMoveY
   m_EditorClassIdentifier: 
-  value: 1
+  value: 2
   duration: 0.5
   delay: 0
   ease: 33
