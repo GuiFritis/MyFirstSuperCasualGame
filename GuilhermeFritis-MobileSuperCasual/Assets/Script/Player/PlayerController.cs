@@ -12,14 +12,12 @@ public class PlayerController : MonoBehaviour
     public float speed = 1f;
 
     public string enemyTag = "Enemy";
+    public string endLineTag = "EndLine";
+
+    public GameObject endScreen;
 
     private bool _canRun = false;
     private Vector3 _pos;
-
-    void Start()
-    {
-        _canRun = true;
-    }
 
     // Update is called once per frame
     void Update()
@@ -45,6 +43,23 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.transform.CompareTag(enemyTag)){
             _canRun = false;
+            CallEndGame();
         }
+    }
+
+    void OnTriggerEnter(Collider collision)
+    {
+        if(collision.transform.CompareTag(endLineTag)){
+            _canRun = false;
+            CallEndGame();
+        }
+    }
+
+    public void StartRun(){
+        _canRun = true;
+    }
+
+    public void CallEndGame(){
+        endScreen.SetActive(true);
     }
 }
