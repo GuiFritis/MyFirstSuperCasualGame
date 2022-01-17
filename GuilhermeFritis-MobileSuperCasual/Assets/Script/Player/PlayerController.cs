@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Padrao.Core.Singleton;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Singleton<PlayerController>
 {
 
     [Header("Lerp")]
@@ -18,6 +19,12 @@ public class PlayerController : MonoBehaviour
 
     private bool _canRun = false;
     private Vector3 _pos;
+    private float _curSpeed;
+
+    void Start()
+    {
+        ResetSpeed();
+    }
 
     // Update is called once per frame
     void Update()
@@ -36,7 +43,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void WalkForward(){
-        transform.Translate(transform.forward * speed * Time.deltaTime);
+        transform.Translate(transform.forward * _curSpeed * Time.deltaTime);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -62,4 +69,15 @@ public class PlayerController : MonoBehaviour
     public void CallEndGame(){
         endScreen.SetActive(true);
     }
+
+    #region POWER_UPS
+    public void SpeedUp(float speedMultiplier){
+        _curSpeed *= speedMultiplier;
+    }
+
+    public void ResetSpeed(){
+        _curSpeed = speed;
+    }
+    #endregion
+
 }
