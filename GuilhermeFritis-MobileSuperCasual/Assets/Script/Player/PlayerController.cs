@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Padrao.Core.Singleton;
+using TMPro;
+using DG.Tweening;
 
 public class PlayerController : Singleton<PlayerController>
 {
@@ -17,12 +19,18 @@ public class PlayerController : Singleton<PlayerController>
 
     public GameObject endScreen;
 
+    [Header("Text")]
+    public TextMeshPro uiTextPowerUp;
+
     private bool _canRun = false;
     private Vector3 _pos;
     private float _curSpeed;
+    private bool _invencible = false;
+    private Vector3 _startPosition;
 
     void Start()
     {
+        _startPosition = transform.position;
         ResetSpeed();
     }
 
@@ -48,7 +56,7 @@ public class PlayerController : Singleton<PlayerController>
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.transform.CompareTag(enemyTag)){
+        if(!_invencible && collision.transform.CompareTag(enemyTag)){
             _canRun = false;
             CallEndGame();
         }
@@ -71,12 +79,31 @@ public class PlayerController : Singleton<PlayerController>
     }
 
     #region POWER_UPS
+    public void SetPowerUpText(string s){
+        uiTextPowerUp.text = s;
+    }
+
     public void SpeedUp(float speedMultiplier){
         _curSpeed *= speedMultiplier;
     }
 
     public void ResetSpeed(){
         _curSpeed = speed;
+    }
+
+    public void SetInvencible(bool invencible){
+        _invencible = invencible;
+    }
+
+    public void SetFlight(float flightHeight, float duration, float animationDur, Ease ease){
+
+        transform.DOMoveY(_startPosition.y + flightHeight, animationDur).SetEase(ease);
+
+        Invoke(nameof(Land), duration);
+    }
+
+    public void Land(){
+        transform.DOMoveY(_startPosition.y, .3f);
     }
     #endregion
 
