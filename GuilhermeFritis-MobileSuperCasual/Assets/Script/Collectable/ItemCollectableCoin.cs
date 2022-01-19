@@ -1,3 +1,5 @@
+using System;
+using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +10,14 @@ public class ItemCollectableCoin : ItemCollectableBase
 
     public SOAnimation collectingMoveY;
     // public SOAnimation collectingFade;
+    public float lerp = 5f;
+    public bool collect = false;
+
+    public void Update(){
+        if(collect){
+            transform.position = Vector3.Lerp(transform.position, PlayerController.Instance.transform.position, lerp * Time.deltaTime);
+        }
+    }
 
     protected override void Collect()
     {
@@ -15,14 +25,11 @@ public class ItemCollectableCoin : ItemCollectableBase
             audioSorce.Play();
         }
         collectingMoveY.DGAnimate(transform.DOMoveY(collectingMoveY.value , collectingMoveY.duration));
-        // collectingFade.DGAnimate(collectableSprite.DOFade(collectingFade.value, collectingFade.duration));
-        // Invoke(nameof(OnCollect), collectingFade.delay);
-        // Invoke(nameof(HideObject), collectingFade.delay + hideDelay + collectParticleSystem.main.duration);
+        collect = true;
         base.Collect();
     }
     protected override void OnCollect()
     {
         base.OnCollect();
-        // CollectableManager.Instance.AddCoin();
     }
 }
