@@ -1496,6 +1496,7 @@ MonoBehaviour:
   endScreen: {fileID: 1161882674}
   uiTextPowerUp: {fileID: 74897713}
   coinCollector: {fileID: 422030847}
+  animatorManager: {fileID: 2138074576}
 --- !u!136 &986529483
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2549,7 +2550,12 @@ MonoBehaviour:
     trigger: run
   - type: 2
     trigger: die
-  animator: {fileID: 0}
+  animator: {fileID: 2138074577}
+--- !u!95 &2138074577 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7193805671317595757, guid: 89e20167823a30d459856414377997d1, type: 3}
+  m_PrefabInstance: {fileID: 2138074573}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &114924202737893722
 PrefabInstance:
   m_ObjectHideFlags: 0
