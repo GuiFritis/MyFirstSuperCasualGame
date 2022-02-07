@@ -31,7 +31,8 @@ public class LevelManager : MonoBehaviour
             }
         }
         _curLevel = Instantiate(levels[_index], container);
-        _curLevel.transform.localScale = Vector3.zero;
+        _curLevel.transform.localScale = Vector3.one;
+        CreateLevelPieces();
     }
 
     #region 
@@ -61,6 +62,8 @@ public class LevelManager : MonoBehaviour
         {
             CreateLevelPiece(_curSetup.levelPiecesEnd);
         }
+
+        ColorManager.Instance.ChangeColorByType(_curSetup.artType);
 
         // StartCoroutine(nameof(CreateLevelPiceCoroutine));
     }
