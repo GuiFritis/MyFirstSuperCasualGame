@@ -13,6 +13,7 @@ public class ColorManager : Singleton<ColorManager>
         foreach(var item in colorSetups){
             if(item.artType == type){
                 setup = item;
+                break;
             }
         }
         

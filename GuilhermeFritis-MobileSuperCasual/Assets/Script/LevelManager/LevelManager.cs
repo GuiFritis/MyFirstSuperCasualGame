@@ -81,7 +81,7 @@ public class LevelManager : MonoBehaviour
 
     private void CreateLevelPiece(List<LevelPieceBase> list){
         var piece = list[Random.Range(0, list.Count)];
-        var spawnedPiece = Instantiate(piece, container);
+        var spawnedPiece = Instantiate(piece, _curLevel.transform);
 
         if(_spawnedPieces.Count > 0){
             var lastPiece = _spawnedPieces[_spawnedPieces.Count-1];
