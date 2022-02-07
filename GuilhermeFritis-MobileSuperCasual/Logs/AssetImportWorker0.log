@@ -1156,3 +1156,4 @@ Received Import Request.
 Start importing Assets/_SO/PieceSetupWoods1.asset using Guid(f20c8a9a93a01ec4f9ae4170dc79ac9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39b6d0c17e4e814117947f3076c86e0c') in 0.018348 seconds 
   Import took 0.021065 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
