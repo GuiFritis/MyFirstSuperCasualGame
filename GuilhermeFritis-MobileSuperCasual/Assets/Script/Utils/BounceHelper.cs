@@ -12,6 +12,7 @@ public class BounceHelper : MonoBehaviour
 
     public void Bounce(){
         transform.DOKill();
+        transform.localScale = Vector3.one;
         transform.DOScale(scaleBounce, scaleDur).SetEase(scaleEase).SetLoops(2, LoopType.Yoyo);
     }
 

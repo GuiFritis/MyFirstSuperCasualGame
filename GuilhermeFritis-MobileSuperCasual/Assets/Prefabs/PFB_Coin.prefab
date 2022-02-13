@@ -54,6 +54,7 @@ MonoBehaviour:
   collectingScale: {fileID: 11400000, guid: 045b09731373cb24aae6e63b85d7434c, type: 2}
   lerp: 5
   collect: 0
+  bounceDistance: 0.5
 --- !u!136 &4200018985255416619
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -164,3 +165,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dur: 1.5
   startColor: {r: 1, g: 1, b: 1, a: 1}
+  mesh: {fileID: 4301060541154494320}

@@ -12,6 +12,7 @@ public class ItemCollectableCoin : ItemCollectableBase
     public SOAnimation collectingScale;
     public float lerp = 5f;
     public bool collect = false;
+    public float bounceDistance = 1.5f;
 
     void Start()
     {
@@ -21,6 +22,9 @@ public class ItemCollectableCoin : ItemCollectableBase
     void Update(){
         if(collect){
             transform.position = Vector3.Lerp(transform.position, PlayerController.Instance.transform.position, lerp * Time.deltaTime);
+            if(Vector3.Distance(transform.position, PlayerController.Instance.transform.position) < bounceDistance){
+                Invoke(nameof(PlayerBounce), collectingMoveY.duration);
+            }
         }
     }
 
@@ -35,8 +39,11 @@ public class ItemCollectableCoin : ItemCollectableBase
         base.Collect();
     }
     protected override void OnCollect()
-    {
-        PlayerController.Instance.Bounce();
+    {   
         base.OnCollect();
+    }
+
+    private void PlayerBounce(){        
+        PlayerController.Instance.Bounce();
     }
 }
