@@ -13,7 +13,12 @@ public class ItemCollectableCoin : ItemCollectableBase
     public float lerp = 5f;
     public bool collect = false;
 
-    public void Update(){
+    void Start()
+    {
+        CoinsAnimationManager.Instance.RegisterCoin(this);
+    }
+
+    void Update(){
         if(collect){
             transform.position = Vector3.Lerp(transform.position, PlayerController.Instance.transform.position, lerp * Time.deltaTime);
         }

@@ -421,6 +421,55 @@ Transform:
   m_Father: {fileID: 551701293}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &403962593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 403962594}
+  - component: {fileID: 403962595}
+  m_Layer: 0
+  m_Name: CoinsAnimationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &403962594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403962593}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -3.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 437653060}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &403962595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403962593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc280df95456c841a3031d64683b494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itens: []
+  scaleDur: 0.2
+  scaleDelay: 0.1
+  scaleEase: 27
+  rotationDur: 0.7
+  rotationEase: 9
 --- !u!1 &410632510
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,6 +588,7 @@ Transform:
   - {fileID: 1861586243}
   - {fileID: 1253179273}
   - {fileID: 714667180}
+  - {fileID: 403962594}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1052,7 +1102,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.23708664, y: -0.000000014869431, z: 0.000000003628806, w: 0.97148854}
+  m_LocalRotation: {x: 0.23708665, y: 0.000000020752436, z: -0.0000000050645226, w: 0.97148854}
   m_LocalPosition: {x: 0, y: 6.68, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1664,7 +1714,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344248753}
-  m_LocalRotation: {x: 0.23708664, y: -0.000000014869431, z: 0.000000003628806, w: 0.97148854}
+  m_LocalRotation: {x: 0.23708665, y: 0.000000020752436, z: -0.0000000050645226, w: 0.97148854}
   m_LocalPosition: {x: 0, y: 6.68, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2085,11 +2135,14 @@ MonoBehaviour:
   levels:
   - {fileID: 186942183}
   levelPieceBaseSetups:
-  - {fileID: 11400000, guid: e65d858355e5f76419c6c47855bcdcca, type: 2}
   - {fileID: 11400000, guid: f20c8a9a93a01ec4f9ae4170dc79ac9b, type: 2}
+  - {fileID: 11400000, guid: e65d858355e5f76419c6c47855bcdcca, type: 2}
   - {fileID: 11400000, guid: dc632ed3151764e44bb2886d36b03eb2, type: 2}
   - {fileID: 11400000, guid: d2bbfa30e6924fa4c96fb0c6d1f909e9, type: 2}
   timeToPieces: 0.3
+  scaleDur: 0.2
+  scaleDelay: 0.15
+  scaleEase: 27
   _index: 0
 --- !u!4 &1861586243
 Transform:
