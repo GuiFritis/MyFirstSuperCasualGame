@@ -51,6 +51,9 @@ MonoBehaviour:
   objCollider: {fileID: 4200018985255416619}
   audioSorce: {fileID: 0}
   collectingMoveY: {fileID: 11400000, guid: f46006d6e659f8b44b5ceb7f4638797d, type: 2}
+  collectingScale: {fileID: 11400000, guid: 045b09731373cb24aae6e63b85d7434c, type: 2}
+  lerp: 5
+  collect: 0
 --- !u!136 &4200018985255416619
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -76,6 +79,7 @@ GameObject:
   - component: {fileID: 4301060541154494317}
   - component: {fileID: 4301060541154494321}
   - component: {fileID: 4301060541154494320}
+  - component: {fileID: 2642415860764625706}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -146,3 +150,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2642415860764625706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4301060541154494316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b5dc4b4a836594db2f7c1081956f2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dur: 1.5
+  startColor: {r: 1, g: 1, b: 1, a: 1}

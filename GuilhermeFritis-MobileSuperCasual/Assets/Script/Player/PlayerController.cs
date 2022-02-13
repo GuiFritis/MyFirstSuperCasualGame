@@ -27,6 +27,8 @@ public class PlayerController : Singleton<PlayerController>
 
     [Header("Animation")]
     public AnimatorManager animatorManager;
+    [SerializeField]
+    private BounceHelper _bounceHelper;
 
     private bool _canRun = false;
     private Vector3 _pos;
@@ -47,6 +49,12 @@ public class PlayerController : Singleton<PlayerController>
         if(_canRun){
             Move();
             WalkForward();
+        }
+    }
+
+    public void Bounce(){
+        if(_bounceHelper != null){
+            _bounceHelper.Bounce();
         }
     }
 

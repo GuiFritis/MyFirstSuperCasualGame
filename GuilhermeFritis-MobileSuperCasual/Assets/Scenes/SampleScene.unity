@@ -466,7 +466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itens: []
   scaleDur: 0.2
-  scaleDelay: 0.1
+  scaleDelay: 0.05
   scaleEase: 27
   rotationDur: 0.7
   rotationEase: 9
@@ -1102,7 +1102,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.23708665, y: 0.000000020752436, z: -0.0000000050645226, w: 0.97148854}
+  m_LocalRotation: {x: 0.23708664, y: -0.000000014869433, z: 0.000000003628806, w: 0.97148854}
   m_LocalPosition: {x: 0, y: 6.68, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1249,6 +1249,7 @@ GameObject:
   - component: {fileID: 986529483}
   - component: {fileID: 986529486}
   - component: {fileID: 986529482}
+  - component: {fileID: 986529484}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1294,6 +1295,7 @@ MonoBehaviour:
   uiTextPowerUp: {fileID: 74897713}
   coinCollector: {fileID: 422030847}
   animatorManager: {fileID: 2138074576}
+  _bounceHelper: {fileID: 986529484}
 --- !u!136 &986529483
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1308,6 +1310,21 @@ CapsuleCollider:
   m_Height: 1.96
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &986529484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986529480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8c1122cab4f5e4b89df1a35896b81e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleDur: 0.05
+  scaleBounce: 1.1
+  scaleEase: 1
 --- !u!54 &986529486
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1714,7 +1731,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344248753}
-  m_LocalRotation: {x: 0.23708665, y: 0.000000020752436, z: -0.0000000050645226, w: 0.97148854}
+  m_LocalRotation: {x: 0.23708664, y: -0.000000014869433, z: 0.000000003628806, w: 0.97148854}
   m_LocalPosition: {x: 0, y: 6.68, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2141,7 +2158,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d2bbfa30e6924fa4c96fb0c6d1f909e9, type: 2}
   timeToPieces: 0.3
   scaleDur: 0.2
-  scaleDelay: 0.15
+  scaleDelay: 0.1
   scaleEase: 27
   _index: 0
 --- !u!4 &1861586243

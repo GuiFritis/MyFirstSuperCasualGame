@@ -9,7 +9,7 @@ public class ItemCollectableCoin : ItemCollectableBase
 {
 
     public SOAnimation collectingMoveY;
-    // public SOAnimation collectingFade;
+    public SOAnimation collectingScale;
     public float lerp = 5f;
     public bool collect = false;
 
@@ -30,11 +30,13 @@ public class ItemCollectableCoin : ItemCollectableBase
             audioSorce.Play();
         }
         collectingMoveY.DGAnimate(transform.DOMoveY(collectingMoveY.value , collectingMoveY.duration));
+        collectingScale.DGAnimate(transform.DOScale(collectingScale.value , collectingScale.duration));
         collect = true;
         base.Collect();
     }
     protected override void OnCollect()
     {
+        PlayerController.Instance.Bounce();
         base.OnCollect();
     }
 }

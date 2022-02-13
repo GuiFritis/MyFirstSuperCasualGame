@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 1642322724343519338}
   - component: {fileID: 1642322724343519339}
   - component: {fileID: 1642322724343519336}
+  - component: {fileID: 5758421955413848363}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -240,6 +241,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &5758421955413848363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642322724343519334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b5dc4b4a836594db2f7c1081956f2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dur: 1
+  startColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1715528356820318880
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +312,7 @@ GameObject:
   - component: {fileID: 567843941855191374}
   - component: {fileID: 4824495196258406103}
   - component: {fileID: 6195404954367151259}
+  - component: {fileID: 1365862140718266450}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -380,6 +396,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1365862140718266450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064311443311701008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b5dc4b4a836594db2f7c1081956f2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dur: 1
+  startColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2160342938621349299
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +512,7 @@ GameObject:
   - component: {fileID: 8752723689207306454}
   - component: {fileID: 9168002810506897462}
   - component: {fileID: 2514334732531766588}
+  - component: {fileID: 2965892328657240764}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -565,6 +596,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2965892328657240764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4573765108936846281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b5dc4b4a836594db2f7c1081956f2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dur: 1
+  startColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &5223770629710024351
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,6 +667,7 @@ GameObject:
   - component: {fileID: 2305634064846587969}
   - component: {fileID: 6603272670899355166}
   - component: {fileID: 6166889212905963875}
+  - component: {fileID: 3735188965722260599}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -705,6 +751,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3735188965722260599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6006816058338266002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b5dc4b4a836594db2f7c1081956f2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dur: 1
+  startColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &8414167544493216570
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,6 +811,7 @@ GameObject:
   - component: {fileID: 8744878672513722495}
   - component: {fileID: 4204952456695797428}
   - component: {fileID: 2261343823441672634}
+  - component: {fileID: 3857496756525674450}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -834,6 +895,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3857496756525674450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8435938749896853669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b5dc4b4a836594db2f7c1081956f2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dur: 1
+  startColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1642322722434461086
 PrefabInstance:
   m_ObjectHideFlags: 0

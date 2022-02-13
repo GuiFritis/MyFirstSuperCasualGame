@@ -8,6 +8,7 @@ public class PowerUpBase : ItemCollectableBase
     public float duration = 5f;
     protected override void OnCollect()
     {
+        PlayerController.Instance.Bounce();
         base.OnCollect();
         StartPowerUp();
     }
