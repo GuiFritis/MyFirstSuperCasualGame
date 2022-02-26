@@ -155,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dur: 1
   startColor: {r: 1, g: 1, b: 1, a: 1}
+  mesh: {fileID: 6610701279188797549}
 --- !u!1 &3624298060139317191
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dur: 1
   startColor: {r: 1, g: 1, b: 1, a: 1}
+  mesh: {fileID: 3624298060852705328}
 --- !u!1 &3624298060866838313
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,6 +362,7 @@ Transform:
   - {fileID: 3624298061386885913}
   - {fileID: 3624298060139317188}
   - {fileID: 5116125475295099293}
+  - {fileID: 3092932389836553699}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -561,6 +564,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dur: 1
   startColor: {r: 1, g: 1, b: 1, a: 1}
+  mesh: {fileID: 7382148433932496524}
+--- !u!1 &4545180881561973550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3092932389836553699}
+  - component: {fileID: 4071231610035475254}
+  m_Layer: 0
+  m_Name: ArtParticle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3092932389836553699
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4545180881561973550}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 10, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2366149274614918965}
+  m_Father: {fileID: 3624298061014730068}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4071231610035475254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4545180881561973550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 311f8cae782d1024a915e1e81b1c09ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curArt: {fileID: 8235290743144588291}
 --- !u!1 &5783612579379983201
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,6 +688,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curArt: {fileID: 4045160868698197067}
+--- !u!1 &8235290743144588291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2366149274614918965}
+  m_Layer: 0
+  m_Name: Particle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2366149274614918965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8235290743144588291}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3092932389836553699}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &8636456387617123273
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dur: 1
   startColor: {r: 1, g: 1, b: 1, a: 1}
+  mesh: {fileID: 9161779253078859333}
 --- !u!1001 &3448446173942786166
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -120,8 +120,12 @@ public class LevelManager : MonoBehaviour
 
         foreach (var item in artPieces)
         {
-            item.ChangePiece(ArtManager.Instance.GetSetupByType(_curSetup.artType).gameObject);
+            item.ChangePiece(ArtManager.Instance.GetSetupByType(_curSetup.artType).piece);
         }
+
+        var artParticle = spawnedPiece.GetComponentInChildren<ArtParticle>();
+
+        artParticle.ChangeParticle(ArtManager.Instance.GetSetupByType(_curSetup.artType).particle);
 
         _spawnedPieces.Add(spawnedPiece);
     }
