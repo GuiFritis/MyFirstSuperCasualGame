@@ -30,6 +30,9 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField]
     private BounceHelper _bounceHelper;
 
+    [Header("VFX")]
+    public ParticleSystem VFX_Dead;
+
     private bool _canRun = false;
     private Vector3 _pos;
     private float _curSpeed;
@@ -72,7 +75,6 @@ public class PlayerController : Singleton<PlayerController>
     void OnCollisionEnter(Collision collision)
     {
         if(!_invencible && collision.transform.CompareTag(enemyTag)){
-            _canRun = false;
             MoveBack(collision.transform);
             CallEndGame(AnimatorManager.AnimationType.DEAD);
         }
@@ -81,7 +83,6 @@ public class PlayerController : Singleton<PlayerController>
     void OnTriggerEnter(Collider collision)
     {
         if(collision.transform.CompareTag(endLineTag)){
-            _canRun = false;
             CallEndGame(AnimatorManager.AnimationType.IDLE);
         }
     }
@@ -96,8 +97,13 @@ public class PlayerController : Singleton<PlayerController>
     }
 
     public void CallEndGame(AnimatorManager.AnimationType animationType = AnimatorManager.AnimationType.IDLE){
+        SetInvencible(true);
+        _canRun = false;
         endScreen.SetActive(true);
         animatorManager.Play(animationType);
+        if(VFX_Dead != null && animationType == AnimatorManager.AnimationType.DEAD){
+            VFX_Dead.Play();
+        }
     }
 
     #region POWER_UPS
